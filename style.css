@@ -1,0 +1,56 @@
+input{
+    color: brown;
+}
+
+label{
+    color: brown;
+}
+
+#inputForm{
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    position: relative;
+    top: 40px;
+    border: 3px solid rgba(200, 200, 200, 0.6);
+    border-radius: 24px;
+    padding: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+#outputDiv{
+    border: 3px solid rgba(200, 200, 200, 0.6);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+#outputText{
+    color: rgba(0, 0, 0, 0.9);
+}
+
+#outputDiv.toggled label{
+    color: rgba(0, 0, 212, 0.9);
+    transition: 0.5s;
+}
+
+#outputDiv.toggled{
+    background-color: aquamarine;
+    transition: 0.5s;
+}
+
+body{
+    background-color: rgba(200, 80, 80, 0.2);
+}
+
+textarea{
+    background-color: rgba(200, 80, 80, 0.2);
+}
+
+.mainDiv{
+    text-align: center;
+}
+
+.dayHeader{
+    font-size: xx-large;
+}
