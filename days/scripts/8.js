@@ -5,7 +5,6 @@ const outputText = document.getElementById("outputText");
 const outputDiv = document.getElementById("outputDiv");
 
 inputButton.onclick = onInputButtonClick;
-stopButton.onclick = onStopButtonClick;
 
 let stopProcessing = false;
 
@@ -13,9 +12,6 @@ function onInputButtonClick(){
     let inputText = inputTextArea.value;
     
     inputText ? ProcessInput(inputText) : inputText;
-}
-function onStopButtonClick(){
-    stopProcessing = true;
 }
 
 class Node{
