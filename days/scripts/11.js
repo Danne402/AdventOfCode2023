@@ -13,7 +13,7 @@ function onInputButtonClick(){
 
 const EMPTY = ".";
 const GALAXY = "#";
-const SIZE_INCREASE = 999999;
+const SIZE_INCREASE = 9;
 let nodeIds = 0;
 let galaxies = [];
 
@@ -27,15 +27,18 @@ class Node{
     equals(node){
         return node.id === this.id;
     }
+
     setCoords(x, y){
         this.x = x;
         this.y = y;
     }
+
     getDistanceFromNode(node){
-        if (this.comparedNodes.find(cn => cn.equals(node)) != undefined || node.comparedNodes.find(cn => cn.equals(this)) != undefined)
+        if (this.comparedNodes.find(cn => cn.equals(node)) != undefined)
             return 0;
 
         this.comparedNodes.push(node);
+        node.comparedNodes.push(this);
         // console.log("Distance between other (x = " + node.x + ", y = " + node.y + ") and this (x = " + this.x + ", y = " + this.y + ") is " + (Math.abs(node.x - this.x) + Math.abs(node.y - this.y)));
         return (Math.abs(node.x - this.x) + Math.abs(node.y - this.y));
     }
